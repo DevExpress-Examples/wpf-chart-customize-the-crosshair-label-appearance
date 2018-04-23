@@ -1,0 +1,70 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
+        x:Class="CrosshairTemplateExample.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <dxc:ChartControl>
+            <!--region #PopupTemplateRegion-->
+            <dxc:ChartControl.CrosshairOptions>
+                <dxc:CrosshairOptions>
+                    <dxc:CrosshairOptions.PopupTemplate>
+                        <DataTemplate>
+                            <Border Background="#C0FFFFFF" 
+                                    BorderBrush="#C0C0C0C0" 
+                                    BorderThickness="1"
+                                    Padding="16">
+                                <ItemsControl ItemsSource="{Binding PresentationData}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <ContentPresenter Content="{Binding}" 
+                                                              ContentTemplate="{Binding Path=CrosshairSeriesLabelTemplate}"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </Border>
+                        </DataTemplate>
+                    </dxc:CrosshairOptions.PopupTemplate>
+                </dxc:CrosshairOptions>
+            </dxc:ChartControl.CrosshairOptions>
+            <!--endregion #PopupTemplateRegion-->
+            <dxc:ChartControl.Legends>
+                <dxc:Legend/>
+            </dxc:ChartControl.Legends>
+            <dxc:XYDiagram2D>
+                <dxc:BarSideBySideSeries2D DisplayName="2014">
+                    <dxc:BarSideBySideSeries2D.Model>
+                        <dxc:BorderlessSimpleBar2DModel/>
+                    </dxc:BarSideBySideSeries2D.Model>
+                    <dxc:SeriesPoint Argument="Asia"        Value="4.2372"/>
+                    <dxc:SeriesPoint Argument="Australia"   Value="1.7871"/>
+                    <dxc:SeriesPoint Argument="Europe"      Value="3.0884"/>
+                    <dxc:SeriesPoint Argument="North America" Value="3.4855"/>
+                    <dxc:SeriesPoint Argument="South America" Value="1.6027"/>
+                </dxc:BarSideBySideSeries2D>
+                <dxc:BarSideBySideSeries2D DisplayName="2015">
+                    <dxc:BarSideBySideSeries2D.Model>
+                        <dxc:BorderlessSimpleBar2DModel/>
+                    </dxc:BarSideBySideSeries2D.Model>
+                    <dxc:SeriesPoint Argument="Asia"        Value="4.7685"/>
+                    <dxc:SeriesPoint Argument="Australia"   Value="1.9576"/>
+                    <dxc:SeriesPoint Argument="Europe"      Value="3.3579"/>
+                    <dxc:SeriesPoint Argument="North America" Value="3.7477"/>
+                    <dxc:SeriesPoint Argument="South America" Value="1.8237"/>
+                </dxc:BarSideBySideSeries2D>
+                <dxc:BarSideBySideSeries2D DisplayName="2016">
+                    <dxc:BarSideBySideSeries2D.Model>
+                        <dxc:BorderlessSimpleBar2DModel/>
+                    </dxc:BarSideBySideSeries2D.Model>
+                    <dxc:SeriesPoint Argument="Asia"        Value="5.2890"/>
+                    <dxc:SeriesPoint Argument="Australia"   Value="2.2727"/>
+                    <dxc:SeriesPoint Argument="Europe"      Value="3.7257"/>
+                    <dxc:SeriesPoint Argument="North America" Value="4.1825"/>
+                    <dxc:SeriesPoint Argument="South America" Value="2.1172"/>
+                </dxc:BarSideBySideSeries2D>
+
+            </dxc:XYDiagram2D>
+        </dxc:ChartControl>
+
+    </Grid>
+</Window>
