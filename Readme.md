@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[MainWindow.xaml](./CS/CrosshairTemplateExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CrosshairTemplateExample/MainWindow.xaml))**
+<!-- default file list end -->
 # How to customize the Crosshair Label appearance
 
 
