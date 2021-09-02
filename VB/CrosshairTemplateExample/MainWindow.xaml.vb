@@ -15,13 +15,13 @@ Imports System.Windows.Navigation
 Imports System.Windows.Shapes
 
 Namespace CrosshairTemplateExample
-    ''' <summary>
-    ''' Interaction logic for MainWindow.xaml
-    ''' </summary>
-    Partial Public Class MainWindow
-        Inherits Window
+	''' <summary>
+	''' Interaction logic for MainWindow.xaml
+	''' </summary>
+	Partial Public Class MainWindow
+		Inherits Window
 
-        Public Sub New()
-        End Sub
-    End Class
+		Public Sub New()
+		End Sub
+	End Class
 End Namespace
